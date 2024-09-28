@@ -86,7 +86,7 @@ function Home() {
                 </button>
               </div>
               <div className="col-6  text-md-right text-center mt-3 mt-md-0">
-                <span className="text-muted">Posted {job.date_created}</span>
+                <span className="text-muted">Posted {job.time}</span>
               </div>
             </div>
           </li>
