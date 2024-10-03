@@ -13,6 +13,7 @@ function Community() {
     getPosts();
   }, []);
 
+  
   const getPosts = async () => {
     try {
       const res = await api.get("/api/posts/");
