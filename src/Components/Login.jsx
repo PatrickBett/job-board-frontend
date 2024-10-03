@@ -10,7 +10,9 @@ function Login({ setIsLoggedIn }) {
   const [error, setError] = useState("");
 
   const handleLogin = async (e) => {
+    localStorage.clear();
     e.preventDefault();
+    console.log([username,password])
 
     try {
       const res = await api.post("/api/token/", { username, password });
@@ -62,7 +64,9 @@ function Login({ setIsLoggedIn }) {
           Sign In
         </button>
       </form>
-      {error && <div className="alert alert-danger">{error}</div>}
+
+      {error && <div className="alert alert-danger">{error}
+        </div>}
       <div>
         Don't have an Account yet? <Link to="/register">Sign up Here</Link>
       </div>
