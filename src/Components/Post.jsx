@@ -49,10 +49,7 @@ function Post({ posts }) {
                   <CommentIcon className="me-2" />
                   Comments
                 </button>
-                <button className="btn border-0 ">
-                  <ShareIcon className="me-2" />
-                  Share
-                </button>
+                
               </div>
             </div>
           </li>
