@@ -10,14 +10,13 @@ function Login({ setIsLoggedIn }) {
   const [error, setError] = useState("");
 
   const handleLogin = async (e) => {
-    localStorage.clear();
+    
     e.preventDefault();
-    console.log([username,password])
+    
 
     try {
       const res = await api.post("/api/token/", { username, password });
       const token = res.data.access;
-      localStorage.clear();
       localStorage.setItem(ACCESS_TOKEN, token);
       localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
       setIsLoggedIn(true);
