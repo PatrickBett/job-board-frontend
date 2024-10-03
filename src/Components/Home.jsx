@@ -97,7 +97,7 @@ function Home() {
         <div className="modal-dialog modal-md">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title">Add Post</h1>
+              <h1 className="modal-title">Application</h1>
               <button
                 type="button"
                 className="btn-close"
