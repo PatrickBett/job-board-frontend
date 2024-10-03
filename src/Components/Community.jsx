@@ -13,7 +13,7 @@ function Community() {
     getPosts();
   }, []);
 
-  
+
   const getPosts = async () => {
     try {
       const res = await api.get("/api/posts/");
@@ -35,7 +35,7 @@ function Community() {
       const res = await api.post("/api/posts/", content );
       console.log(res.data);
       // console.log(content)
-      setPosts([res.data, ...posts]); // Add the new post to the list
+      setPosts([...posts, res.data]); // Add the new post to the list
       setContent(""); // Clear the content after a successful post
 
       alert("Post added successfully");
