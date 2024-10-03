@@ -37,7 +37,7 @@ function Community() {
       // console.log(content)
       setPosts([...posts, res.data]); // Add the new post to the list
       setContent(""); // Clear the content after a successful post
-
+      document.querySelector("#myModal .btn-close").click(); // Close modal
       alert("Post added successfully");
     } 
 
