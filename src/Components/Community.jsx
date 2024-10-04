@@ -30,10 +30,11 @@ function Community() {
 
   const createNewPost = async (e) => {
     e.preventDefault();
+    const res = await api.post("/api/posts/", content );
+    console.log("res data",res.data);
+    console.log("Content", content)
 
     try {
-      const res = await api.post("/api/posts/", content );
-      console.log(res.data);
       // console.log(content)
       setPosts([...posts, res.data]); // Add the new post to the list
       setContent(""); // Clear the content after a successful post
