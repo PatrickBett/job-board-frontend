@@ -43,6 +43,7 @@ function Community() {
 
     catch (error) {
       alert("Error adding post");
+      document.querySelector("#myModal .btn-close").click(); // Close modal
       console.error(error);
     }
 
