@@ -6,6 +6,7 @@ import Post from "./Post";
 
 function Community() {
   const [content, setContent] = useState("");
+  const [user, setUser] = useState("");
 
   const [posts, setPosts] = useState([]);
 
@@ -33,7 +34,7 @@ function Community() {
     
 
     try {
-      const res = await api.post("/api/posts/", {content} );
+      const res = await api.post("/api/posts/", {user, content} );
       console.log("res data",res.data);
       
       // console.log(content)
