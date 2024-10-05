@@ -6,18 +6,18 @@ function Footer() {
   return (
     <div className="row" id='footer'>
         <div className="col-md-4">
-            <h3>Terms And Conditions</h3>
-            <h5>termsand conditions</h5>
+            <h5>Terms And Conditions</h5>
+            <h7>termsand conditions</h7>
         </div>
 
         <div className="col-md-4">
-            <h3>Privacy Policy</h3>
-            <h5>All Rights Reserved</h5>
+            <h5>Privacy Policy</h5>
+            <h7>All Rights Reserved</h7>
         </div>
 
         <div className="col-md-4">
-            <h3>Contact Us</h3>
-            <h5>Customer service - 0791474737</h5>
+            <h5>Contact Us</h5>
+            <h7>Customer service - 0791474737</h7>
         </div>
     </div>
   )
