@@ -9,15 +9,29 @@ function Home() {
   const [jobs, setJobs] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
 
+
   const handleApplication = async (e) => {
     e.preventDefault();
+     // Step 1: Create a new FormData instance
+     const formData = new FormData();
+    
+     // Append files
+     formData.append("resume", e.target.elements.resume.files[0]);
+     formData.append("cv", e.target.elements.cv.files[0]);
+     formData.append("cover_letter", e.target.elements.cover_letter.files[0]);
+     formData.append("comment", e.target.elements.comment.value);
     try {
-      const res = await api.post("/api/application/", {});
+      const res = await api.post("/api/application/", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       alert("Application successful");
     } catch (error) {
       alert(error);
     }
   };
+
 
   const toggleFavorite = () => {
     setIsFavorite((prevState) => !prevState);
@@ -92,6 +106,12 @@ function Home() {
           </li>
         ))}
       </ul>
+
+
+
+
+{/* APPLICATION FORM */}
+
 
       <div className="modal" id="mymodal">
         <div className="modal-dialog modal-md">
