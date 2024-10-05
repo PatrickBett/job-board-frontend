@@ -6,7 +6,7 @@ import Post from "./Post";
 
 function Community() {
   const [content, setContent] = useState("");
-  const [user, setUser] = useState("");
+  
 
   const [posts, setPosts] = useState([]);
 
@@ -32,13 +32,10 @@ function Community() {
   const createNewPost = async (e) => {
     e.preventDefault();
     
-
     try {
-      const res = await api.post("/api/posts/", {user, content} );
+      const res = await api.post("/api/posts/", {content} );
       console.log("res data",res.data);
-      console.log("username", user)
-      
-      // console.log(content)
+     
       setPosts([...posts, res.data]); // Add the new post to the list
       setContent(""); // Clear the content after a successful post
       // document.querySelector("#myModal .btn-close").click(); // Close modal
