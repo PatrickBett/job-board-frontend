@@ -1,8 +1,10 @@
 import React from 'react'
+import "./footer.css";
+
 
 function Footer() {
   return (
-    <div className="row">
+    <div className="row" id='footer'>
         <div className="col-md-4">
             <h3>Terms And Conditions</h3>
             <h5>termsand conditions</h5>
