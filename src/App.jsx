@@ -10,6 +10,7 @@ import { Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { ACCESS_TOKEN } from "./constants";
 import Community from "./Components/Community";
+import Footer from "./Components/Footer";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -23,6 +24,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+
         <Routes>
           <Route path="/" element={<Login />} />
           <Route
@@ -50,6 +52,8 @@ function App() {
           />
           <Route path="logout" element={<Navigate to="/login" />} />
         </Routes>
+
+        <Footer />
       </BrowserRouter>
     </>
   );
