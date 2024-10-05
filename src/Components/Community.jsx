@@ -36,17 +36,18 @@ function Community() {
     try {
       const res = await api.post("/api/posts/", {user, content} );
       console.log("res data",res.data);
+      console.log("username", user)
       
       // console.log(content)
       setPosts([...posts, res.data]); // Add the new post to the list
       setContent(""); // Clear the content after a successful post
-      document.querySelector("#myModal .btn-close").click(); // Close modal
+      // document.querySelector("#myModal .btn-close").click(); // Close modal
       alert("Post added successfully");
     } 
 
     catch (error) {
       alert("Error adding post");
-      document.querySelector("#myModal .btn-close").click(); // Close modal
+      // document.querySelector("#myModal .btn-close").click(); // Close modal
       console.error(error);
     }
 
