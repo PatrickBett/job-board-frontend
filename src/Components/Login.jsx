@@ -9,9 +9,9 @@ function Login({ setIsLoggedIn }) {
   const navigate = useNavigate();
   const [error, setError] = useState("");
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (event) => {
     
-    e.preventDefault();
+    event.preventDefault();
     
 
     try {
