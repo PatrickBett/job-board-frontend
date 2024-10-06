@@ -56,6 +56,7 @@ function Community() {
         <div className="col-8">
           <Form />
         </div>
+        
         <div className="col-4">
           <button
             className="btn btn-success my-2"

@@ -15,6 +15,7 @@ function Login({ setIsLoggedIn }) {
     
 
     try {
+      localStorage.clear();
       const res = await api.post("/api/token/", { username, password });
       const token = res.data.access;
       localStorage.setItem(ACCESS_TOKEN, token);
