@@ -16,6 +16,7 @@ function Login({ setIsLoggedIn }) {
 
     try {
       localStorage.clear();
+      console.log(username, password)
       const res = await api.post("/api/token/", { username, password });
       const token = res.data.access;
       localStorage.setItem(ACCESS_TOKEN, token);
@@ -23,6 +24,7 @@ function Login({ setIsLoggedIn }) {
       setIsLoggedIn(true);
       navigate("/jobs");
     } catch (error) {
+      console.log(error)
       setError("Invalid Username or Password");
     }
   };
