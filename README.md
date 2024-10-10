@@ -1,4 +1,6 @@
 # Mega Jobs
+Live Url: 
+https://job-board-bg3q.onrender.com/
 
 Welcome to Mega Jobs, a comprehensive platform designed for job seekers and employers looking to connect in the realm of remote work. With features like job listings and community interactions, Mega Jobs aims to enhance your job-seeking experience.
 
@@ -19,7 +21,7 @@ Welcome to Mega Jobs, a comprehensive platform designed for job seekers and empl
 
 ### Job Listings
 - **Browse Remote Jobs:** Users can view a list of jobs posted by various employers.
-- **Job Details:** Each job listing includes details such as job title, description, budget, location, and company.
+- **Job Details:** Each job listing includes details such as job title, description, budget, location, company and date posted.
 
 ### Community Interaction
 - **Discussion Forum:** Users can interact with each other in a community section, sharing experiences and insights related to job seeking and remote work.
@@ -32,7 +34,7 @@ Welcome to Mega Jobs, a comprehensive platform designed for job seekers and empl
 
 - **Frontend:** React
 - **Backend:** Django (REST API)
-- **Database:** (Specify your database, e.g., PostgreSQL, SQLite)
+- **Database:** PostgreSQL, SQLite
 - **Styling:** Bootstrap for responsive design
 - **Authentication:** JWT (JSON Web Tokens)
 
@@ -43,7 +45,7 @@ To run Mega Jobs locally, follow these steps:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/mega-jobs.git
-   cd mega-jobs
+   
    npm install
    npm start
    Access the Application: Open your browser and navigate to http://localhost:3000 to view the application.
