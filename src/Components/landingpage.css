@@ -1,0 +1,30 @@
+body{
+    
+    height: fit-content;
+}
+#landingpage{
+    height: 100vh;
+    background: url('https://bold-org.ghost.io/content/images/2024/04/remote-work.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+}
+.display-4{
+    color: #95df00;
+}
+#get-started{
+    background-color: orangered;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 300px;
+    border-radius: 30px;
+}
+.get-started{
+    color: white;
+    text-decoration: none;
+}

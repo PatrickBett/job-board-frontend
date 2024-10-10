@@ -28,6 +28,7 @@ function Register() {
       navigate("/login");
     } catch (error) {
       setError("Provide all input fields");
+      console.log(error)
     }
   };
 

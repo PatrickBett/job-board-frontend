@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { ACCESS_TOKEN } from "./constants";
 import Community from "./Components/Community";
 import Footer from "./Components/Footer";
+import Landingpage from "./Components/Landingpage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,7 +27,7 @@ function App() {
         <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
 
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Landingpage />} />
           <Route
             path="login"
             element={<Login setIsLoggedIn={setIsLoggedIn} />}

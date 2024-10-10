@@ -1,7 +1,9 @@
 #footer{
-    background-color: #007aff;
-    
-    padding: 10px 0;
-  width: 100%;
+  background-color: rgb(37, 36, 36);
+  bottom: 0;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  height: fit-content;
+    
+  
 }

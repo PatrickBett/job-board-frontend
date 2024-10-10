@@ -7,7 +7,7 @@ function Navbar({ isLoggedIn, onLogout }) {
     <>
       <nav className="navbar navbar-expand-sm   ">
         <div className="container-fluid ">
-          <Link className="navbar-brand fw-bolder " to="/">
+          <Link className="navbar-brand fw-bolder text-white" to="/">
             Mega-Jobs
           </Link>
 
@@ -27,13 +27,13 @@ function Navbar({ isLoggedIn, onLogout }) {
               {isLoggedIn ? (
                 <>
                   <li className="nav-item me-5">
-                    <Link className="nav-link fw-bolder fs-5 " to="/jobs">
+                    <Link className="nav-link fw-bolder fs-5 text-white" to="/jobs">
                       Job Listing
                     </Link>
                   </li>
 
                   <li className="nav-item me-5">
-                    <Link className="nav-link fw-bolder fs-5 " to="/community">
+                    <Link className="nav-link fw-bolder fs-5 text-white" to="/community">
                       Community
                     </Link>
                   </li>
@@ -51,13 +51,13 @@ function Navbar({ isLoggedIn, onLogout }) {
                     </Link>
                     <ul className="dropdown-menu  border-0 ">
                       <li className="nav-item ">
-                        <Link className="nav-link fs-6 fw-bolder  " to="">
+                        <Link className="nav-link fs-6 fw-bolder text-white " to="">
                           profile
                         </Link>
                       </li>
-                      <li className="nav-item" id="profile">
+                      <li className="nav-item " id="profile">
                         <Link
-                          className="nav-link fs-6 fw-bolder "
+                          className="nav-link fs-6 fw-bolder text-white"
                           to="/logout"
                           onClick={onLogout}
                         >
@@ -70,13 +70,13 @@ function Navbar({ isLoggedIn, onLogout }) {
               ) : (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link fw-bolder" to="/register">
-                      Sign Up
+                    <Link className="nav-link fw-bolder text-white" to="/register">
+                      Sign-Up
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link fw-bolder" to="/login">
-                      Sign In
+                    <Link className="nav-link fw-bolder text-white" to="/login">
+                      Sign-In
                     </Link>
                   </li>
                 </>
