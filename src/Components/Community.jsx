@@ -53,9 +53,6 @@ function Community() {
   return (
     <div className="container border ">
       <div className="row">
-        <div className="col-8">
-          <Form />
-        </div>
         
         <div className="col-4">
           <button
