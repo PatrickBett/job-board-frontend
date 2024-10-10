@@ -1,9 +1,8 @@
 import React from "react";
 import PersonIcon from "@mui/icons-material/Person";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
+
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ShareIcon from "@mui/icons-material/Share";
+
 import CommentIcon from "@mui/icons-material/Comment";
 import "./community.css";
 import Commentinput from "./Commentinput";
@@ -23,12 +22,7 @@ function Post({ posts }) {
                 <span className="fw-bolder">{post.user.username}</span>
               </div>
               <div className="col-2 d-flex justify-content-end align-items-center ms-auto">
-                <button className="btn  me-3 ">
-                  <EditIcon />
-                </button>
-                <button className="btn ">
-                  <DeleteIcon />
-                </button>
+                
               </div>
             </div>
             <div className="container">
