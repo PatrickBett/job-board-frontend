@@ -9,8 +9,7 @@ Welcome to Mega Jobs, a comprehensive platform designed for job seekers and empl
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Integration](#api-integration)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
