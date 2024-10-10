@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import api from "../api";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import "./home.css";
-import Form from "./Form";
+
 
 function Home() {
   const [jobs, setJobs] = useState([]);
@@ -46,7 +46,7 @@ function Home() {
 
   return (
     <div className="container-fluid border shadow">
-      <Form />
+      
 
       {/* Search Input */}
       <div className="row mb-4">
