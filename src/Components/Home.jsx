@@ -49,7 +49,7 @@ function Home() {
       
 
       {/* Search Input */}
-      <div className="row mb-4">
+      <div className="row mb-4 mt-4">
         <div className="col-12">
           <input
             type="text"
