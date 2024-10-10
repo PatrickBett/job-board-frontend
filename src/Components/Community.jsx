@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./community.css";
-import Form from "./Form";
+
 import api from "../api";
 import Post from "./Post";
 

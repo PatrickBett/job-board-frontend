@@ -14,8 +14,8 @@ function Landingpage() {
     </div>
 
     <div>
-    <div class="text-center mt-5">
-  <h1 class="display-4">The #1 Job Site to Find Remote Jobs-No Ads, Scams, or Junk</h1>
+    <div className="text-center mt-5">
+  <h1 className="display-4">The #1 Job Site to Find Remote Jobs-No Ads, Scams, or Junk</h1>
 </div>
 
         <div className="container mt-5 border p-5">
