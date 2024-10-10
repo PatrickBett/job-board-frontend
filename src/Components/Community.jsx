@@ -90,7 +90,7 @@ function Community() {
                 />
                 <div className="modal-footer">
                   <button type="submit" className="btn btn-primary">
-                    Save
+                    Post
                   </button>
                   <button
                     type="button"
