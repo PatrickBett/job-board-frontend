@@ -51,13 +51,13 @@ function Navbar({ isLoggedIn, onLogout }) {
                     </Link>
                     <ul className="dropdown-menu  border-0 ">
                       <li className="nav-item ">
-                        <Link className="nav-link fs-6 fw-bolder text-white " to="">
+                        <Link className="nav-link fs-6 fw-bolder  " to="">
                           profile
                         </Link>
                       </li>
                       <li className="nav-item " id="profile">
                         <Link
-                          className="nav-link fs-6 fw-bolder text-white"
+                          className="nav-link fs-6 fw-bolder "
                           to="/logout"
                           onClick={onLogout}
                         >
