@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import api from "../api";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import "./home.css";
+import { format } from 'date-fns';
 
 
 function Home() {
@@ -37,6 +38,10 @@ function Home() {
     } catch (error) {
       console.log(error);
     }
+  };
+//Change time to a human readable format.
+  const formatDate = (isoString) => {
+    return format(new Date(isoString), 'MMMM dd, yyyy HH:mm:ss'); // Customize the format as needed
   };
 
   // Filter jobs based on search term
@@ -96,7 +101,7 @@ function Home() {
                 </button>
               </div>
               <div className="col-6 text-md-right text-center mt-3 mt-md-0">
-                <span className="text-muted">Posted {job.time}</span>
+                <span className="text-muted">Posted {formatDate(job.time)}</span>
               </div>
             </div>
           </li>
