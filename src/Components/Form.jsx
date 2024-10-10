@@ -5,7 +5,7 @@ function Form() {
     <form className="d-flex mx-2 my-2 ">
       <input className="form-control me-2" type="text" placeholder="Search" />
       <button className="btn btn-primary me-1" type="button">
-        Search
+        Search By Job
       </button>
     </form>
   );

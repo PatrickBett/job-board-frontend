@@ -8,7 +8,7 @@ import Form from "./Form";
 function Home() {
   const [jobs, setJobs] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
-
+  const [searchTerm, setSearchTerm] = useState(""); // New state for search term
 
   const handleApplication = async (e) => {
     e.preventDefault();
@@ -20,7 +20,6 @@ function Home() {
       alert(error);
     }
   };
-
 
   const toggleFavorite = () => {
     setIsFavorite((prevState) => !prevState);
@@ -39,12 +38,31 @@ function Home() {
       console.log(error);
     }
   };
+
+  // Filter jobs based on search term
+  const filteredJobs = jobs.filter((job) =>
+    job.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="container-fluid border shadow">
       <Form />
 
+      {/* Search Input */}
+      <div className="row mb-4">
+        <div className="col-12">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search jobs by title..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)} // Update search term state
+          />
+        </div>
+      </div>
+
       <ul className="list-unstyled">
-        {jobs.map((job, index) => (
+        {filteredJobs.map((job, index) => (
           <li className="border px-4 py-2" key={index}>
             <div className="row">
               <div className="col-11">
@@ -52,17 +70,6 @@ function Home() {
               </div>
               <div className="col-1">
                 <FavoriteBorderIcon style={{ color: "green" }} />
-                {/* {isFavorite ? (
-                  <FavoriteBorderIcon
-                    style={{ color: "green" }}
-                    onClick={toggleFavorite}
-                  />
-                ) : (
-                  <FavoriteBorderIcon
-                    style={{ color: "red" }}
-                    onClick={toggleFavorite}
-                  />
-                )} */}
               </div>
             </div>
             <p>{job.description}</p>
@@ -79,7 +86,7 @@ function Home() {
             </div>
 
             <div className="row mt-5 mb-3">
-              <div className="col-6 ">
+              <div className="col-6">
                 <button
                   className="btn btn-success w-100"
                   data-bs-target="#mymodal"
@@ -88,7 +95,7 @@ function Home() {
                   Apply Now
                 </button>
               </div>
-              <div className="col-6  text-md-right text-center mt-3 mt-md-0">
+              <div className="col-6 text-md-right text-center mt-3 mt-md-0">
                 <span className="text-muted">Posted {job.time}</span>
               </div>
             </div>
@@ -96,12 +103,7 @@ function Home() {
         ))}
       </ul>
 
-
-
-
-{/* APPLICATION FORM */}
-
-
+      {/* Application Form */}
       <div className="modal" id="mymodal">
         <div className="modal-dialog modal-md">
           <div className="modal-content">
