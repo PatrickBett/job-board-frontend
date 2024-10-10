@@ -9,8 +9,8 @@ function Landingpage() {
     <>
     <div className="container-fluid" id='landingpage'>  
             <h1 className='p-3 fw-bolder'>Bring top talent to your business, <strong>your way</strong></h1>
-            <h5 className='p-3'>Build your dream team, fill skill gaps, and scale with our </h5>
-            <h5 className='p-3'>full-service, customizable Enterprise platform. </h5>    
+            <h5 className='p-3'>Build your dream team, fill skill gaps, and scale with our full-service, customizable Enterprise platform. </h5>
+             
     </div>
 
     <div>
