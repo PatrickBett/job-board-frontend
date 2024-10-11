@@ -17,12 +17,13 @@ function Commentinput({postId }) {
     
     try{
       const res = await api.get('/api/post/comments/')
+
       const filteredComments = res.data.filter(
         (comment) => comment.post.id === postId
       );
       setpostcomments(filteredComments)
+      console.log(filteredComments)
       
-      console.log("Length Comments",filteredComments.length)
   
     }
     catch(error){
@@ -37,15 +38,13 @@ const postcomment = async(e)=>{
   
   try{
     const res = await api.post('/api/post/comments/',{post:postId , comment});
-    console.log(res.data)
-    // setpostcomments([...postcomments, res.data])
-    // console.log({comment})
+    
+    setpostcomments([...postcomments, res.data]); // Add the new comment to the list
+
 
     alert("success")
   }
   catch(error){
-    
-    console.log(comment,postId)
     console.log(error)
     alert("Submission failed!!!")
   } 
@@ -72,6 +71,7 @@ const postcomment = async(e)=>{
         <ul>
         {postcomments.map(
           (comment)=>(
+            
             <li key={comment.id}>
               <div className="border mt-2 p-4">
               <PersonIcon />
