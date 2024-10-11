@@ -19,16 +19,16 @@ function Landingpage() {
 </div>
 
         <div className="container mt-5 border p-5">
-        <h3 className='mb-2'> <CheckCircleIcon />Unlimited Job Search Resources</h3>
+        <h3 className='mb-2'> <CheckCircleIcon id='person-icon'/>Unlimited Job Search Resources</h3>
             <p className='mb-5'>Full access to all features including unlimited jobs, articles, and webinars to help you with your remote job search.</p>
         
-            <h3 className='mb-2'><CheckCircleIcon />Higher Quality Listings
+            <h3 className='mb-2'><CheckCircleIcon id='person-icon'/>Higher Quality Listings
             </h3>
             <p className='mb-5'>Only legit jobs. No ads, scams, or junk to sift through. Our team spends 200+ hours/day verifying every job.
 
 </p>
         
-            <h3 className='mb-2'><CheckCircleIcon />Save Time</h3>
+            <h3 className='mb-2'><CheckCircleIcon id='person-icon'/>Save Time</h3>
             <p className='mb-5'>Go straight from job listings to applications. No more hopping from one job board to the next.</p>
         
             <button type='button' id='get-started'>
