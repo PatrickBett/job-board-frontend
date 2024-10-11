@@ -57,7 +57,7 @@ To run Mega Jobs locally, follow these steps:
 - **Sign Up**: Create a new account using the sign-up feature.
 - **Sign In**: Log in to access your dashboard.
 - **Browse Jobs**: Explore the job listings available in your area of interest.
-- **Community**: Engage with other users in the community section.
+- **Community**: Engage with other users in the community section. Each post made can be replied to by all members.
 - **Apply for Jobs**: Submit your applications by uploading your CV, resume, and cover letter.
 
 ## API Integration
