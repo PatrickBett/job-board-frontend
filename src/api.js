@@ -14,7 +14,7 @@ api.interceptors.request.use(
         // get token if available in localstorage
         const token = localStorage.getItem(ACCESS_TOKEN)
 
-        if(token){
+        if(token && !config.url.includes("/register")){
             config.headers.Authorization = `Bearer ${token}`
         }
         return config
