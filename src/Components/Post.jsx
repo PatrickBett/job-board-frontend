@@ -8,7 +8,12 @@ import "./community.css";
 import Commentinput from "./Commentinput";
 
 import { useState } from "react";
+
+
+
 function Post({ posts }) {
+   // State to hold the ID of the post for which the user wants to comment
+   const [selectedPostId, setSelectedPostId] = useState(null);
   return (
     <>
       <ul>
@@ -27,6 +32,7 @@ function Post({ posts }) {
             </div>
             <div className="container">
               <p>{post.content}</p>
+              <p>{post.id}</p>
             </div>
             <div className="row">
               <div className="col-12">
@@ -39,6 +45,13 @@ function Post({ posts }) {
                   className="btn border-0 me-1"
                   data-bs-toggle="modal"
                   data-bs-target="#commentmodal"
+                  data-post-id={post.id} // Store the post ID in a data attribute
+                  
+
+                  onClick={() => {
+                    setSelectedPostId(post.id); // Set the selected post ID
+                    console.log(`Selected Post ID: ${post.id}`); // Log the post ID or handle it accordingly
+                  }}
                 >
                   <CommentIcon className="me-2" />
                   Comments
@@ -66,7 +79,8 @@ function Post({ posts }) {
               />
             </div>
             <div className="modal-body">
-              <Commentinput posts={posts} />
+              {/* Pass the selectedPostId as a prop to CommentInput */}
+              <Commentinput postId={selectedPostId}/>
             </div>
             <div className="modal-footer">
               <button className="btn btn-danger" data-bs-dismiss="modal">
