@@ -13,7 +13,8 @@ api.interceptors.request.use(
     (config) =>{
         // get token if available in localstorage
         const token = localStorage.getItem(ACCESS_TOKEN)
-
+//The && !config.url.includes("/register") ensures that authorization token is 
+//included on registration
         if(token && !config.url.includes("/register")){
             config.headers.Authorization = `Bearer ${token}`
         }
