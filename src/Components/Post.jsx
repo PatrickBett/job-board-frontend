@@ -32,7 +32,7 @@ function Post({ posts }) {
             </div>
             <div className="container">
               <p>{post.content}</p>
-              <p>{post.id}</p>
+             
             </div>
             <div className="row">
               <div className="col-12">

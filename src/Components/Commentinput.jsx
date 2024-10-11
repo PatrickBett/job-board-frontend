@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "../api";
+import PersonIcon from "@mui/icons-material/Person";
 
 function Commentinput({postId }) {
 
@@ -9,16 +10,20 @@ function Commentinput({postId }) {
   useEffect(
     ()=>{
       getpostcomments()
-    },[]
+    },[postId]
   )
 // Function to get comments of each post.
   const getpostcomments = async()=>{
     
     try{
       const res = await api.get('/api/post/comments/')
-      // setpostcomments(res.data)
-      console.log(res.data)
-      console.log("success postcomments")
+      const filteredComments = res.data.filter(
+        (comment) => comment.post.id === postId
+      );
+      setpostcomments(filteredComments)
+      
+      console.log("Length Comments",filteredComments.length)
+  
     }
     catch(error){
       console.log(error)
@@ -61,7 +66,25 @@ const postcomment = async(e)=>{
       </form>
 
       <div className="row border">
-        <p>No comments</p>
+
+        {postcomments.length > 0 ?
+
+        <ul>
+        {postcomments.map(
+          (comment)=>(
+            <li key={comment.id}>
+              <div className="border mt-2 p-4">
+              <PersonIcon />
+              {comment.user.username}
+              <p>{comment.comment}</p>
+              </div>
+            </li>
+            
+          )
+        )}
+        </ul>
+        :<p>No comments yet!!!</p>
+        }
       </div>
     </>
   );
