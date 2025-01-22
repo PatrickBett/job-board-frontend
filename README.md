@@ -1,6 +1,6 @@
 # Mega Jobs
 Live Url: 
-https://job-board-bg3q.onrender.com/
+https://jobboardsite.netlify.app/
 
 Welcome to Mega Jobs, a comprehensive platform designed for job seekers and employers looking to connect in the realm of remote work. With features like job listings and community interactions, Mega Jobs aims to enhance your job-seeking experience.
 
