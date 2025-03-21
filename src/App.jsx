@@ -12,6 +12,8 @@ import { ACCESS_TOKEN } from "./constants";
 import Community from "./Components/Community";
 import Footer from "./Components/Footer";
 import Landingpage from "./Components/Landingpage";
+import Profile from "./Components/Profile";
+import ProfilePage from "./Components/ProfilePage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -51,6 +53,17 @@ function App() {
               </Protected>
             }
           />
+
+          <Route
+            path="profile"
+            element={
+              <Protected setIsLoggedIn={setIsLoggedIn}>
+                {<ProfilePage />}
+              </Protected>
+            }
+          />
+
+
           <Route path="logout" element={<Navigate to="/login" />} />
         </Routes>
 

@@ -1,0 +1,372 @@
+profile.css
+
+.profile-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Profile header styles */
+  .profile-header {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .profile-cover {
+    height: 180px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+  }
+  
+  .profile-avatar {
+    position: absolute;
+    left: 2rem;
+    top: 100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    margin-left: 190px;
+    padding-top: 2rem;
+  }
+  
+  .profile-info h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .profile-location {
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .edit-profile-btn {
+    position: absolute;
+    top: 190px;
+    right: 2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Tabs styles */
+  .profile-tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-top: 4rem;
+  }
+  
+  .tab-btn {
+    background: transparent;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  
+  .tab-btn:hover {
+    color: #28a745;
+  }
+  
+  .tab-btn.active {
+    color: #28a745;
+  }
+  
+  .tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #28a745;
+  }
+  
+  /* Profile content area */
+  .profile-content {
+    padding: 2rem;
+  }
+  
+  /* About section styles */
+  .bio-section h3 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .edit-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .edit-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .edit-form input,
+  .edit-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .edit-form textarea {
+    resize: vertical;
+  }
+  
+  /* Skills, Languages, Education common styles */
+  .skills-list,
+  .languages-list,
+  .education-list {
+    margin-bottom: 2rem;
+  }
+  
+  .skill-item,
+  .language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-info,
+  .language-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .skill-name,
+  .language-name {
+    font-weight: 500;
+    margin-right: 1rem;
+  }
+  
+  .proficiency-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+  }
+  
+  /* Proficiency badge colors */
+  .beginner {
+    background-color: #6c757d;
+  }
+  
+  .intermediate {
+    background-color: #17a2b8;
+  }
+  
+  .advanced {
+    background-color: #28a745;
+  }
+  
+  .expert {
+    background-color: #007bff;
+  }
+  
+  .basic {
+    background-color: #6c757d;
+  }
+  
+  .conversational {
+    background-color: #17a2b8;
+  }
+  
+  .fluent {
+    background-color: #28a745;
+  }
+  
+  .native {
+    background-color: #007bff;
+  }
+  
+  /* Delete button */
+  .delete-btn {
+    background: #dc3545;
+    border: none;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Form for adding new items */
+  .add-form {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .add-form h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-row input,
+  .form-row select {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .add-btn,
+  .save-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-btn:hover,
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Education specific styles */
+  .education-item {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .education-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+  }
+  
+  .education-info p {
+    margin: 0.25rem 0;
+    color: #555;
+  }
+  
+  .edu-dates {
+    color: #6c757d;
+    font-size: 0.9rem;
+  }
+  
+  .form-group.half {
+    flex: 1;
+  }
+  
+  .form-group.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group.checkbox input {
+    margin-right: 0.5rem;
+    width: auto;
+  }
+  
+  .empty-message {
+    color: #6c757d;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #28a745;
+    border-radius: 50%;
+    margin: 5rem auto;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .profile-info {
+      margin-left: 0;
+      text-align: center;
+      padding-top: 4rem;
+    }
+    
+    .edit-profile-btn {
+      top: auto;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+    
+    .profile-tabs {
+      margin-top: 3rem;
+      overflow-x: auto;
+    }
+    
+}

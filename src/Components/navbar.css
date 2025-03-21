@@ -1,12 +1,159 @@
-.custom-size{
-    height: 40px;
-    width: 40px;
-}
-.navbar{
+.navbar {
     position: sticky;
     top: 0;
-    background-color: rgb(37, 36, 36);
-    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(90deg, #1a1a1a, #333);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 12px 0;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+  }
+  
+  .navbar-brand {
+    padding: 0;
+  }
+  
+  .brand-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .sign-up-btn {
+    background-color: #2ecc71;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .sign-up-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sign-in-btn {
+    border: 2px solid #3498db;
+    color: white !important;
+    padding: 6px 14px !important;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .sign-in-btn:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .user-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+    transition: all 0.3s;
+    object-fit: cover;
+  }
+  
+  .user-toggle {
+    padding: 0 !important;
+    background: none !important;
+  }
+  
+  .user-toggle:after {
+    display: none;
+  }
+  
+  .user-avatar:hover {
+    transform: scale(1.1);
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+  }
+  
+  .dropdown-menu {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    min-width: 180px;
+    margin-top: 10px;
+  }
+  
+  .dropdown-item {
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #3498db;
+    transform: translateX(5px);
+  }
+  
+  .dropdown-divider {
+    margin: 5px 0;
+    opacity: 0.1;
+  }
+  
+  .logout-item {
+    color: #e74c3c;
+  }
+  
+  .logout-item:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: #1a1a1a;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
     
+    .nav-item {
+      margin: 5px 0;
+      width: 100%;
+    }
     
-}
+    .sign-up-btn, .sign-in-btn {
+      display: block;
+      text-align: center;
+      margin: 8px 0;
+    }
+  }

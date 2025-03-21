@@ -1,0 +1,168 @@
+/* home.css */
+
+/* Main container styling */
+.container-fluid.border.shadow {
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 12px !important;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Search bar styling */
+  .form-control {
+    border-radius: 50px;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  }
+  
+  /* Job listing styling */
+  .list-unstyled li {
+    margin-bottom: 1.5rem;
+    border-radius: 8px !important;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .list-unstyled li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Job title styling */
+  .list-unstyled h3 {
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  
+  /* Job description styling */
+  .list-unstyled p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Job metadata styling */
+  .fw-bolder {
+    color: #28a745;
+    margin-bottom: 0.2rem;
+  }
+  
+  /* Favorite icon styling */
+  .col-1 svg {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    font-size: 1.8rem;
+  }
+  
+  .col-1 svg:hover {
+    transform: scale(1.2);
+    color: #ff5e5e !important;
+  }
+  
+  /* Button styling */
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Posted date styling */
+  .text-muted {
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  
+  /* Modal styling */
+  .modal-content {
+    border-radius: 12px;
+    border: none;
+  }
+  
+  .modal-header {
+    background-color: #28a745;
+    color: white;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .modal-title {
+    font-weight: 600;
+  }
+  
+  .modal-body {
+    padding: 2rem;
+  }
+  
+  .modal-body label {
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .modal-body .form-control {
+    margin-bottom: 1rem;
+  }
+  
+  .modal-footer {
+    border-top: none;
+    padding: 1rem 0;
+  }
+  
+  .btn-primary {
+    background-color: #28a745;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 25px;
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 25px;
+  }
+  
+  /* Empty state */
+  .list-unstyled:empty::after {
+    content: "No jobs found matching your search";
+    display: block;
+    text-align: center;
+    padding: 3rem;
+    color: #888;
+    font-style: italic;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container-fluid.border.shadow {
+      padding: 1rem;
+    }
+    
+    .list-unstyled li {
+      padding: 1rem !important;
+    }
+    
+    .col-6 {
+      width: 100%;
+    }
+  }
