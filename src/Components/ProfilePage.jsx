@@ -30,9 +30,7 @@ function ProfilePage() {
     current: false
   });
 
-  useEffect(() => {
-    fetchProfile();
-  }, []);
+
 
   const fetchProfile = async () => {
     try {
@@ -56,6 +54,15 @@ function ProfilePage() {
       }
     }
   };
+
+
+
+
+  useEffect(() => {
+    fetchProfile();
+  }, []);
+
+  
 
   const handleUpdateProfile = async () => {
     try {
