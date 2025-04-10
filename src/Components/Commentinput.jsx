@@ -41,8 +41,8 @@ const postcomment = async(e)=>{
     
     setpostcomments([...postcomments, res.data]); // Add the new comment to the list
 
-
     alert("success")
+    comment("")
   }
   catch(error){
     console.log(error)
@@ -55,10 +55,10 @@ const postcomment = async(e)=>{
   return (
     <>
     
-      <form onSubmit={postcomment}>
+      <form onSubmit={postcomment} className="formcomment">
         <label htmlFor="comment">Comment</label>
         <textarea rows="4" className="form-control" value={comment} onChange={(e)=>setComment(e.target.value)}></textarea>
-        <button className="btn btn-secondary me-2 my-2">Cancel</button>
+        <button className="btn btn-secondary me-2 my-2" data-bs-dismiss="formcomment">Cancel</button>
         <button className="btn btn-primary my-2" type="submit">
           Comment
         </button>
